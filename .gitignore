@@ -1,0 +1,370 @@
+# MCP Automation System - Git Ignore File
+# Prevents sensitive and unnecessary files from being committed
+
+# =============================================================================
+# SECURITY - NEVER COMMIT THESE
+# =============================================================================
+
+# Environment files with secrets
+secrets.env
+.env
+.env.local
+.env.*.local
+*.env
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.der
+
+# Cryptocurrency wallets and keys
+*.wallet
+*.keystore
+mnemonic.txt
+seed_phrases.txt
+private_keys.txt
+
+# SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.ssh
+
+# API keys and tokens
+api_keys.txt
+tokens.txt
+*.token
+.secrets/
+
+# Database files with potentially sensitive data
+*.db
+*.sqlite
+*.sqlite3
+database.db
+
+# =============================================================================
+# PYTHON
+# =============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# =============================================================================
+# NODE.JS / JAVASCRIPT
+# =============================================================================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.parcel-cache
+
+# =============================================================================
+# LOGS AND TEMPORARY FILES
+# =============================================================================
+
+# Log files
+logs/
+*.log
+*.log.*
+log.*
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# =============================================================================
+# DATA AND CACHE
+# =============================================================================
+
+# Data directories
+data/
+cache/
+.cache/
+*.cache
+
+# Blockchain data
+chaindata/
+blockchaincache/
+
+# Machine learning models
+*.model
+*.pkl
+*.joblib
+models/
+checkpoints/
+
+# =============================================================================
+# DEVELOPMENT TOOLS
+# =============================================================================
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+
+# Docker files
+Dockerfile.local
+docker-compose.override.yml
+docker-compose.local.yml
+*.dockerignore
+
+# =============================================================================
+# CLOUD AND DEPLOYMENT
+# =============================================================================
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+.terraform.lock.hcl
+
+# AWS
+.aws/
+aws-credentials.csv
+
+# Google Cloud
+gcloud-credentials.json
+service-account.json
+
+# Azure
+.azure/
+
+# =============================================================================
+# MONITORING AND ANALYTICS
+# =============================================================================
+
+# Monitoring data
+metrics/
+prometheus/
+grafana/
+
+# Performance reports
+profile.stats
+*.prof
+
+# =============================================================================
+# MISCELLANEOUS
+# =============================================================================
+
+# Compiled binaries
+*.exe
+*.dll
+*.dylib
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Local configuration
+local_settings.py
+local_config.yaml
+dev_config.yaml
+
+# Documentation builds
+docs/_build/
+docs/build/
+
+# =============================================================================
+# PROJECT SPECIFIC
+# =============================================================================
+
+# MCP specific temporary files
+mcp-temp/
+mcp-cache/
+mcp-backup/
+
+# Privacy scan results (may contain sensitive findings)
+privacy-scan-results.json
+privacy-report.txt
+security-scan-results/
+
+# Deployment artifacts
+deployment-logs/
+rollback-data/
+
+# Test data that might contain sensitive information
+test-data/secrets/
+test-env-files/
+
+# Local development overrides
+dev-secrets.env
+local-overrides.yaml
+development-only/
+
+# Generated documentation
+auto-generated-docs/
+api-docs-generated/
+
+# =============================================================================
+# IMPORTANT NOTES
+# =============================================================================
+#
+# 1. NEVER remove entries from the Security section
+# 2. Always verify that secrets.env is ignored before committing
+# 3. Use `git status` to ensure no sensitive files are staged
+# 4. Consider using `git-secrets` or similar tools for additional protection
+# 5. Regularly audit this file to ensure new sensitive file types are covered
+#
+# To check if a file is ignored:
+#   git check-ignore -v <filename>
+#
+# To temporarily track an ignored file:
+#   git add -f <filename>
+#
+# =============================================================================
